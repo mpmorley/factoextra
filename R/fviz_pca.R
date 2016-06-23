@@ -288,7 +288,7 @@ fviz_pca_ind <- function(X,  axes = c(1,2), geom=c("point", "text"), repel = FAL
       
       if("point" %in% geom) 
           p <- p+geom_point(data = ind, 
-                            aes_string('x', 'y', color=name.quali, shape = name.quali),
+                            aes_string('x', 'y', color=name.quali),
                             size = pointsize)
       if(lab$ind & "text" %in% geom) {
         if(repel)
