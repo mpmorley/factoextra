@@ -289,7 +289,8 @@ fviz_pca_ind <- function(X,  axes = c(1,2), geom=c("point", "text"), repel = FAL
       if("point" %in% geom) 
           p <- p+geom_point(data = ind, 
                             aes_string('x', 'y', color=name.quali),
-                            size = pointsize)
+                            size = pointsize
+                            )
       if(lab$ind & "text" %in% geom) {
         if(repel)
           p <- p +ggrepel::geom_text_repel(data = label_coord, 
@@ -313,7 +314,7 @@ fviz_pca_ind <- function(X,  axes = c(1,2), geom=c("point", "text"), repel = FAL
       {
         p <- p + geom_point(data=coord_quali.sup,
                             aes_string('x', 'y', color=name.quali),
-                            size=pointsize*2) 
+                            size=pointsize) 
       }
       if(lab$quali & "text" %in% geom) {
         if(repel)
