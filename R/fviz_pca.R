@@ -267,8 +267,9 @@ fviz_pca_ind <- function(X,  axes = c(1,2), geom=c("point", "text"), repel = FAL
              "from the length of the factor habillage. Please, remove the supplementary ",
              "individuals in the variable habillage.")
       name.quali <- "Groups"
-      ind <- cbind.data.frame(Groups = habillage, ind)
-      ind[, 1]<-as.factor(ind[,1])
+      #MPM Commneted out this lines in order for no tto add the average
+      #ind <- cbind.data.frame(Groups = habillage, ind)
+      #ind[, 1]<-as.factor(ind[,1])
     }
     
     if(!hide$ind) {   
